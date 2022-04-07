@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>   
+    <div class="sobrepor escondido">
+        <div class="check">
+            <div class="topo">Confirmar seu pedido</div>
+            <div class="orçamento">
+                <div class="texto"><div class="comida"></div><div class="precoComida"></div></div>
+                <div class="texto"><div class="bebida"></div><div class="precoBebida"></div></div>
+                <div class="texto"><div class="sobremesa"></div><div class="precoSobremesa"></div></div>
+                <div class="texto"><div class="total">TOTAL</div><div class="precoTotal"></div></div>
+            </div>
+            <div class="finalizar" onclick="mensagemBotao()">Tudo certo, pode pedir!</div>
+            <div class="cancelar" onclick="cancelar()">Cancelar</div>
+        </div>
+    </div>
+    <header>
+        <div class="logo">DrivenEats</div>
+        <div class="slogan">Sua comida em 6 minutos</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="setor"><h4>Primeiro, seu prato</h4></div>
+            <div class ="carousel">
+                <div class="option prato" onclick="toggleSeletor(this, 'Frango Total Flex', 14.90)">
+                    <img src="image/main/frango.png" />
+                    <div class="name"><h5>Frango Total Flex</h5></div>
+                    <div class="about"><p>O frango mais famoso do Brasil</p></div>
+                    <div class="price">R$14,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option prato" onclick="toggleSeletor(this, 'Arroz Infalível', 16.90)">
+                    <img src="image/main/arroz.png" />
+                    <div class="name"><h5>Arroz Infalível</h5></div>
+                    <div class="about"><p>Para você que vai almoçar acompanhado</p></div>
+                    <div class="price">R$16,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option prato" onclick="toggleSeletor(this, 'Yakisobra', 13.90)">
+                    <img src="image/main/yakisoba.png" />
+                    <div class="name"><h5>Yakisobra</h5></div>
+                    <div class="about"><p>Ingredientes de ontem, selecionados com esmero</p></div>
+                    <div class="price">R$13,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option prato" onclick="toggleSeletor(this, 'Dublê de Siri', 12.90)">
+                    <img src="image/main/siri.png" />
+                    <div class="name"><h5>Dublê de Siri</h5></div>
+                    <div class="about"><p>Um pouco de frutos do mar, um pouco de enganação</p></div>
+                    <div class="price">R$12,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option prato" onclick="toggleSeletor(this, 'Sushi de Feijoada', 18.90)">
+                    <img src="image/main/sushi.png" />
+                    <div class="name"><h5>Sushi de Feijoada</h5></div>
+                    <div class="about"><p>O famoso sushi brasileiro</p></div>
+                    <div class="price">R$18,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="setor"><h4>Agora, sua bebida</h4></div>
+            <div class ="carousel">
+                <div class="option drink" onclick="toggleDrink(this, 'Coca-Cola', 4.50)">
+                    <img src="image/drink/coca.png" />
+                    <div class="name"><h5>Coca-Cola</h5></div>
+                    <div class="about"><p>Tem certeza?</p></div>
+                    <div class="price">R$4,50 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option drink" onclick="toggleDrink(this, 'Pepsi', 4.90)">
+                    <img src="image/drink/pepsi.png" />
+                    <div class="name"><h5>Pepsi</h5></div>
+                    <div class="about"><p>Lata 350ml</p></div>
+                    <div class="price">R$4,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option drink" onclick="toggleDrink(this, 'Guaraná Jesus', 7.90)">
+                    <img src="image/drink/jesus.png" />
+                    <div class="name"><h5>Guaraná Jesus</h5></div>
+                    <div class="about"><p>Aceite Jesus em seu almoço</p></div>
+                    <div class="price">R$7,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option drink" onclick="toggleDrink(this, 'Mineirinho', 3.90)">
+                    <img src="image/drink/mineirinho.png" />
+                    <div class="name"><h5>Mineirinho</h5></div>
+                    <div class="about"><p>Garrafa 250ml</p></div>
+                    <div class="price">R$3,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option drink" onclick="toggleDrink(this, 'Dolly', 2.90)">
+                    <img src="image/drink/dolly.png" />
+                    <div class="name"><h5>Dolly</h5></div>
+                    <div class="about"><p>Lata 350ml</p></div>
+                    <div class="price">R$2,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+               
+            </div>
+        </div>
+        <div class="container">
+            <div class="setor"><h4>Por fim, sua sobremesa</h4></div>
+            <div class ="carousel">
+                <div class="option dessert" onclick="toggleDessert(this, 'Pudim', 5.90)">
+                    <img src="image/dessert/pudim.png" />
+                    <div class="name"><h5>Pudim</h5></div>
+                    <div class="about"><p>Minha vó quem fez</p></div>
+                    <div class="price">R$5,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option dessert" onclick="toggleDessert(this, 'Brigadeiro Mágico', 4.90)">
+                    <img src="image/dessert/brigadeiro.png" />
+                    <div class="name"><h5>Brigadeiro Mágico</h5></div>
+                    <div class="about"><p>Minha vó quem fez, de novo</p></div>
+                    <div class="price">R$4,90 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option dessert" onclick="toggleDessert(this, 'Mousse de Maracujá', 6.50)">
+                    <img src="image/dessert/mara.png" />
+                    <div class="name"><h5>Mousse de Maracujá</h5></div>
+                    <div class="about"><p>Minha vó quem fez, outra vez</p></div>
+                    <div class="price">R$6,50 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option dessert" onclick="toggleDessert(this, 'Bananada', 4.50)">
+                    <img src="image/dessert/bananada.png" />
+                    <div class="name"><h5>Bananada</h5></div>
+                    <div class="about"><p>Sim, também foi minha vó</p></div>
+                    <div class="price">R$4,50 <ion-icon class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+                <div class="option dessert" onclick="toggleDessert(this, 'Doce de Jace', 6.00)">
+                    <img src="image/dessert/jaca.png" />
+                    <div class="name"><h5>Doce de Jaca </h5></div>
+                    <div class="about"><p>O favorito da vó</p></div>
+                    <div class="price">R$6,00 <ion-icon     class="escondido" name="checkmark-circle"></ion-icon></div>
+                </div>
+               
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="botao">Selecione os 3 itens <br>para fechar o pedido</div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>

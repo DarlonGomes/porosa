@@ -1,0 +1,282 @@
+
+header{
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 21px;
+    padding-top: 10px;
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+header .logo{
+font-family: 'Righteous';
+font-size: 44px;
+font-weight: 400;
+color: #FFFFFF;
+margin-bottom: 5px;
+}
+
+header .slogan{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* Final do cabeçalho */
+
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin-top: 92px;
+    box-sizing: border-box;
+    padding-top: 31px;
+}
+
+main .container{
+height: auto;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-bottom: 27px ;
+}
+
+
+main .container:nth-child(3){
+    margin-bottom: 92px;
+}
+.container .setor{
+    font-family: 'Righteous';
+    font-size: 26px;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 21px;
+}
+
+.container .carousel{
+    width: 100%;
+    height:auto;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.carousel .option{
+    width: 172px;
+    height: 216px;
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    margin-left: 18px;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;  
+
+}
+
+.option img{
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.option .name{
+    width: 144px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+    margin: 0 14px;
+}
+
+.option .about{
+    width: 144px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+    margin: 0 14px;
+}
+
+.option .price{
+    width: 144px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin: 0 14px;
+    display: flex;
+    justify-content: space-between;
+}
+.price ion-icon{
+    color: #32B72F;
+}
+.option:hover {
+    cursor: pointer;
+}
+
+
+/* Final do corpo */
+
+footer{
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ .botao{
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    color: #FFFFFF;
+}
+
+
+
+/*Final do rodapé */
+
+.selecionado{
+    border: 4px solid #32B72F;
+}
+.selecionado ion-icon{
+    display: flex;
+
+}
+
+
+.sobrepor{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+/* Tive que usar rbga, pois o metodo de 'opacity' estava mexendo com a transparência dos filhos 
+    Usar o Color-picker que o Lelê mostrou foi irado*/
+}
+
+.check{
+    width: 377px;
+    height: 363px;
+    border-radius: 9px;
+    background-color: #50D074;
+    font-family: 'Roboto';
+    font-size: 20px;
+    opacity: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.check .topo{
+    width: 376px;
+    height: 27px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.check .orçamento{
+    width: 377px;
+    height: 147px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.check .orçamento .texto{
+    width: 377px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.texto .comida,.bebida,.sobremesa,.total{
+    width: 180px;
+    padding-left: 20px;
+}
+.texto .precoComida,.precoBebida,.precoSobremesa,.precoTotal{
+    width: auto;
+    padding-right: 20px;
+}
+
+.texto .total,.precoTotal{
+    font-weight: 700;
+}
+
+
+.check .orçamento .total{
+    width: 327px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+
+.check .finalizar{
+    width: 333px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    color: #50D074;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.check .finalizar:hover{
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+.check .cancelar:hover{
+cursor: pointer;
+opacity: 0.5;;
+}
+
+.habilitado{
+    background-color: #32B72F;
+    font-weight: 700;
+}
+
+.habilitado:hover{
+    cursor: pointer;
+    filter: brightness(1.05);
+}
+
+.escondido{
+    display: none;
+    }
